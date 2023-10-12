@@ -85,15 +85,35 @@ bet()
 
 '''
 #4
-def lst():
-    names = ["Mark","Tom","Jacob"]
-    print(" 1) Add a Name", "\n", "2) Change a Name", "\n", "3) Delete a Name", "\n", "4) View all Names", "\n", "5) End Program")
+a = 0
+while a < 10:
+    def lst():
+        names = ["Mark","Tom","Jacob"]
+        print(" 1) Add a Name", "\n", "2) Change a Name", "\n", "3) Delete a Name", "\n", "4) View all Names", "\n", "5) End Program")
     
-    inpt = int(input("Select Option"))
+        inpt = int(input("Select Option"))
     
-    if inpt == 1:
-        usr = input("Input Name")
-        names.insert(0,usr)
-    elif inpt ==2:
-        print("Select word to remove", names)
-lst()  
+        if inpt == 1:
+            usr = input("Input Name")
+            names.insert(0,usr)
+        
+        elif inpt == 2:
+            print(names)
+            nme = input("Select name to remove")
+            pos = names.index(nme)
+            nme1 = input("Input new name")
+            names.insert(pos,nme1)
+            names.pop(pos+1)
+  
+        elif inpt == 3:
+            print(names)
+            nme = input("Select name to remove")
+            pos = names.index(nme)
+            names.pop(pos)
+    
+        elif inpt == 4:
+            print(names)
+    
+        elif inpt ==5:
+            a = a + 10
+    lst()  
