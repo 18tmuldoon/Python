@@ -83,12 +83,12 @@ def bet():
         
 bet()
 
-'''
+
 #4
 a = 0
+names = ["Mark","Tom","Jacob"]
 while a < 10:
     def lst():
-        names = ["Mark","Tom","Jacob"]
         print(" 1) Add a Name", "\n", "2) Change a Name", "\n", "3) Delete a Name", "\n", "4) View all Names", "\n", "5) End Program")
     
         inpt = int(input("Select Option"))
@@ -96,9 +96,8 @@ while a < 10:
         if inpt == 1:
             usr = input("Input Name")
             names.insert(0,usr)
-        
+            
         elif inpt == 2:
-            print(names)
             nme = input("Select name to remove")
             pos = names.index(nme)
             nme1 = input("Input new name")
@@ -115,5 +114,11 @@ while a < 10:
             print(names)
     
         elif inpt ==5:
-            a = a + 10
-    lst()  
+            global a
+            a = 10
+    lst()
+'''
+#5
+while p < 10:   
+    print(" 1) Add to file", "\n", "2) View all records", "\n", "3) Quit program")
+    inpt = int(input("Select Option"))
