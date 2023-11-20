@@ -14,7 +14,7 @@ firebase_admin.initialize_app(cred,{'databaseURL': 'https://tm-lc-cs-default-rtd
 
 ref = db.reference()
 ref.update({'temperature_log':''})
-ref = db.referance().child('temperature_log')
+ref = db.reference().child('temperature_log')
 
 source = input("Please input the source of this data: ")
 i = 0
@@ -29,7 +29,7 @@ while True:
     print(mb_temperature)
     
     if mb_temperature.isdigit():
-        ref.update({'Reading' + str(i):{'Temperature':mb_temperature, 'Location':source}})
+        ref.update({str(int(time.time())):{'Temperature':mb_temperature, 'Location':source}})
         i = i+1
     else:
         print("Check data source")
