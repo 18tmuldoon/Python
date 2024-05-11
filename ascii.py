@@ -16,8 +16,8 @@ output = []
 while leng > 0 :
     y = ord(message[x])
     t = y+2
-    if t > 102:
-        
+    if t > 122:
+        t -= 26
     q = chr(t)
     output.append(q)
     x = x+1
