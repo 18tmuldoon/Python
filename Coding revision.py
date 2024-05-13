@@ -8,7 +8,10 @@ for x in range(0 , len(lst)):
     print(lst)
 
 #2
-hours = [12, 7, 9, 9, 6, 8, 2]
+hours = []
+for x in range(0 , 7):
+    hours.append(int(input("Input hours in day")))
+
 week = 0
 
 for x in range(0 , len(hours)):
